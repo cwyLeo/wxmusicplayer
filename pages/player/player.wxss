@@ -1,0 +1,193 @@
+page{
+  margin: 0;
+  padding: 0;
+}
+@keyframes Rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/* 旋转的类名 */
+.autoRotate {
+  animation-name: Rotate;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+}
+/* 是否正在播放 */
+.playing .cover {
+  animation-play-state: running;
+}
+.audio_con {
+  position: relative;
+  height: 20vh;
+  background-color: rgb(184, 225, 241,0.5);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.audio_con .next{
+  position:absolute; 
+  top: 48%; left: 80%;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 16px solid blue;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.audio_con .next::after{
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: -16px;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-left: 16px solid skyblue;
+}
+.audio_con .next2{
+  position:absolute; 
+  top: 47.8%; left: 85.8%;
+  width: 5px;
+  height: 16px;
+  cursor: pointer;
+  background-color: blue;
+  box-sizing: border-box;
+}
+.audio_con .next2::after{
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: -1px;
+  width: 5px;
+  height: 16px;
+  background-color: skyblue;
+}
+.cover_container{
+  position: relative;
+  left: 39vw;
+  top: 1vh;
+  width: 18vh;
+  height: 18vh;
+  border-radius: 50%;
+  background-color: black;
+}
+.cover{
+  position: absolute;
+  /* position: relative; */
+  left: 3.2vw;
+  top: 2vh;
+  /* margin: auto; */
+  width: 14vh;
+  height: 14vh;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.hide{
+  display: none;
+}
+.list{
+  width: 100%;
+  height: 70vh;
+  background-color: #666;
+}
+.playlist{
+  position: absolute;
+  top: -35vh;
+  height: 40vh;
+  width: 50vw;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.playlist::-webkit-scrollbar{
+  display: none;
+}
+.search{
+  position: relative; 
+  width: 100%; 
+  background-color: rgb(184, 225, 241,0.5); 
+  height: 10vh; 
+  left: 0; 
+  top: 0; 
+  padding: 1vh; 
+  display: block; 
+  box-sizing: border-box;
+}
+.search_action{
+  position: relative; 
+  left: 40vw; 
+  top: -8vh;
+  height: 8vh; 
+  display: block; 
+  box-sizing: border-box; 
+  padding: 0;
+  margin: 0; 
+  line-height: 8vh; 
+  font-size: 15px; 
+  background-color: rgba(12, 164, 235, 0.329);
+  box-shadow: 1px 1px 3px skyblue;
+  border-radius: 50%;
+}
+.search_bar{
+  margin:auto;
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 90vw;
+  height: 8vh;
+  border-radius: 17px;
+  border: 0px;
+  background: 265px center no-repeat rgb(255, 255, 255);
+  text-indent: 2em;
+  outline: none;
+  z-index: 2;
+}
+.song_list{
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #fff;
+}
+.song_list::-webkit-scrollbar {
+  display: none;
+}
+
+.song_list li {
+  font-size: 12px;
+  color: #333;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 680px;
+  padding-left: 10px;
+}
+
+.song_list li:nth-child(odd) {
+  background-color: rgba(240, 240, 240, 0.3);
+}
+
+.song_list li a {
+  display: block;
+  width: 17px;
+  height: 17px;
+  background-size: 100%;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+.song_list li b {
+  font-weight: normal;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mylist .next2::after{
+  width: 0.5vw;
+}

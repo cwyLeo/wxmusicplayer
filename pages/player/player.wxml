@@ -1,0 +1,51 @@
+<!-- player.wxml -->
+<view>
+  <view class="search">
+    <input class="search_bar" type="text" value="{{query}}" bindinput="onInput" />
+    <button class="search_action" style="width: 80rpx; z-index: 2;" bindtap="search">搜索</button>
+  </view>
+  <scroll-view scroll-y class="list">
+    <ul class="song_list">
+            <li wx:for="{{musicList}}" wx:key="index" bindtap="addmusicList" data-item="{{item.id}}" data-item2="{{item.name+'——'+item.artists[0].name}}">
+              <b>{{ item.name }}——{{ item.artists[0].name}}</b> 
+              <!-- <view style="display: flex; align-items: center; justify-items: center; color: red; height:100%; width: 20px; line-height: normal; text-align: center; vertical-align: center; padding: 0 10px;" catchtap="addmusicList" data-item="{{item.id}}" data-item2="{{item.name+'——'+item.artists[0].name}}" class="{{ inmusicList2(item.id) ? 'hide':'' }}">+</view>
+              <span style="color: red; width: 5px;" class="{{ inmusicList2(item.id) ? '':'hide' }}">√</span> -->
+            </li>
+          </ul>
+  </scroll-view>
+  <view class="{{[isPlaying?'playing':'','audio_con']}}">
+  <view class="cover_container">
+    <image class="cover autoRotate" src="{{musicCover}}"/>
+  </view>
+  <view class="mylist">
+  <view class="{{liston?'playlist':'hide'}}">
+    <ul class="song_list" style="width: 30vw; height: 40vh; border-radius:0 0 25px 25px;">
+            <li wx:for="{{mylistname}}" wx:key="index" bindtap="playMusic" data-item2="{{item}}" data-item="">
+              <b style="width: 40vw; overflow: hidden;">{{item}}</b>
+            </li>
+    </ul>
+  </view>
+  <view  bindtap="showmylist">
+    <view class="next2" style="width: 0.5vw; left:7%; top: 44%; transform: rotate(90deg);"></view>
+    <view class="next2" style="width: 0.5vw; left:7%; transform: rotate(90deg);"></view>
+    <view class="next2" style="width: 0.5vw; left:7%; top: 52%; transform: rotate(90deg);"></view>
+  </view>
+  </view>
+    <view bindtap="changePlayingState">
+      <view wx:if="{{!isPlaying}}" class="next" style="left: 20%;"></view>
+      <view wx:if="{{isPlaying}}" class="next2" style="left: 20%;"></view>
+      <view wx:if="{{isPlaying}}" class="next2" style="left: 23%;"></view>
+    </view>
+    <view bindtap="nextMusic">
+      <view class="next" ></view>
+      <view class="next2"></view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
