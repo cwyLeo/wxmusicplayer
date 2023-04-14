@@ -29,10 +29,10 @@
     <view class="next2" style="width: 0.5vw; left:45%; top: 56%; transform: rotate(90deg);"></view>
   </view>
   </view>
-    <view bindtap="changePlayingState" style="position: absolute; top: 50%; left: 20%;">
+    <view bindtap="changePlayingState" style="position: absolute; height: 30%; width: 10%; top: 35%; left: 20%;">
       <view wx:if="{{!isPlaying}}" class="next" style="left: 20%;"></view>
       <view wx:if="{{isPlaying}}" class="next2" style="left: 20%;"></view>
-      <view wx:if="{{isPlaying}}" class="next2" style="left: 23%;"></view>
+      <view wx:if="{{isPlaying}}" class="next2" style="left: 50%;"></view>
     </view>
     <view bindtap="nextMusic">
       <view class="next" ></view>
