@@ -45,11 +45,12 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wx8f12791ee98e6984",
+  "appid": "wxf344d73449629066",
   "projectname": "miniprogram-1",
   "condition": {},
   "editorSetting": {
