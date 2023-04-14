@@ -25,10 +25,10 @@
             </li>
     </ul>
   </view>
-  <view  bindtap="showmylist">
-    <view class="next2" style="width: 0.5vw; left:7%; top: 44%; transform: rotate(90deg);"></view>
-    <view class="next2" style="width: 0.5vw; left:7%; transform: rotate(90deg);"></view>
-    <view class="next2" style="width: 0.5vw; left:7%; top: 52%; transform: rotate(90deg);"></view>
+  <view  bindtap="showmylist" style="position: relative; height: 50px; width: 50px; left: 0px; top:-65px;">
+    <view class="next2" style="width: 0.5vw; left:45%; top: 40%; transform: rotate(90deg);"></view>
+    <view class="next2" style="width: 0.5vw; left:45%; transform: rotate(90deg);"></view>
+    <view class="next2" style="width: 0.5vw; left:45%; top: 56%; transform: rotate(90deg);"></view>
   </view>
   </view>
     <view bindtap="changePlayingState">
