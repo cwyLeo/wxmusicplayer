@@ -8,8 +8,6 @@
     <ul class="song_list">
             <li wx:for="{{musicList}}" wx:key="index" bindtap="addmusicList" data-item="{{item.id}}" data-item2="{{item.name+'——'+item.artists[0].name}}">
               <b>{{ item.name }}——{{ item.artists[0].name}}</b> 
-              <!-- <view style="display: flex; align-items: center; justify-items: center; color: red; height:100%; width: 20px; line-height: normal; text-align: center; vertical-align: center; padding: 0 10px;" catchtap="addmusicList" data-item="{{item.id}}" data-item2="{{item.name+'——'+item.artists[0].name}}" class="{{ inmusicList2(item.id) ? 'hide':'' }}">+</view>
-              <span style="color: red; width: 5px;" class="{{ inmusicList2(item.id) ? '':'hide' }}">√</span> -->
             </li>
           </ul>
   </scroll-view>
@@ -25,13 +23,13 @@
             </li>
     </ul>
   </view>
-  <view  bindtap="showmylist" style="position: relative; height: 50px; width: 50px; left: 0px; top:-65px;">
+  <view  bindtap="showmylist" style="position:absolute; height: 10vh; width: 1vw; left: 8%; top:25%;">
     <view class="next2" style="width: 0.5vw; left:45%; top: 40%; transform: rotate(90deg);"></view>
     <view class="next2" style="width: 0.5vw; left:45%; transform: rotate(90deg);"></view>
     <view class="next2" style="width: 0.5vw; left:45%; top: 56%; transform: rotate(90deg);"></view>
   </view>
   </view>
-    <view bindtap="changePlayingState">
+    <view bindtap="changePlayingState" style="position: absolute; top: 50%; left: 20%;">
       <view wx:if="{{!isPlaying}}" class="next" style="left: 20%;"></view>
       <view wx:if="{{isPlaying}}" class="next2" style="left: 20%;"></view>
       <view wx:if="{{isPlaying}}" class="next2" style="left: 23%;"></view>

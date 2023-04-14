@@ -1,6 +1,7 @@
 page{
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 @keyframes Rotate {
   from {
@@ -69,7 +70,7 @@ page{
 }
 .cover_container{
   position: relative;
-  left: 39vw;
+  left: 36%;
   top: 1vh;
   width: 18vh;
   height: 18vh;
