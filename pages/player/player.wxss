@@ -73,13 +73,16 @@ page{
   top: 1vh;
   width: 18vh;
   height: 18vh;
+  text-align: center;
+  /* align-items: center; */
   border-radius: 50%;
   background-color: black;
 }
 .cover{
   position: absolute;
   /* position: relative; */
-  left: 3.2vw;
+  left: 11%;
+  margin: auto;
   top: 2vh;
   /* margin: auto; */
   width: 14vh;
